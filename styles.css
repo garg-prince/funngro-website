@@ -1,0 +1,101 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #00aeef;
+  padding: 1rem 2rem;
+  color: white;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+nav a.active {
+  border-bottom: 2px solid #ffd100;
+}
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+.hero.company {
+  background: linear-gradient(135deg, #0077c8, #00aeef);
+}
+.hero.teen {
+  background: linear-gradient(135deg, #00aeef, #66ccff);
+}
+.hero .content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffd100;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+section.features {
+  background: white;
+  padding: 3rem 2rem;
+}
+.features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+.card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.cta-block {
+  background: #0077c8;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+}
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    flex-direction: column;
+  }
+}
