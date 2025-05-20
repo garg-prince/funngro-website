@@ -1,0 +1,119 @@
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --accent: #4f46e5;
+  --alt-bg: #f9fafb;
+  --btn: #4f46e5;
+  --btn-text: #ffffff;
+  --navbar-bg: #4f46e5;
+  --footer-bg: #4f46e5;
+}
+body.dark-mode {
+  --bg: #1f2937;
+  --text: #f3f4f6;
+  --alt-bg: #111827;
+  --btn: #2563eb;
+  --btn-text: #ffffff;
+  --navbar-bg: #111827;
+  --footer-bg: #111827;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navbar {
+  background: var(--navbar-bg);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.menu li {
+  display: inline;
+}
+.hamburger {
+  display: none;
+}
+#menu-toggle {
+  display: none;
+}
+.hero {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  background: var(--bg);
+}
+.hero.alt {
+  background: var(--alt-bg);
+}
+.hero-img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: var(--btn);
+  color: var(--btn-text);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.features {
+  padding: 2rem;
+  text-align: center;
+  background: var(--bg);
+}
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.feature {
+  max-width: 300px;
+}
+footer {
+  background: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+  #menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
